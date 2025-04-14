@@ -6,7 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		86028FB02DAD9CF50093564C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86028FAF2DAD9CF50093564C /* WidgetKit.framework */; };
+		86028FB22DAD9CF50093564C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86028FB12DAD9CF50093564C /* SwiftUI.framework */; };
+		86028FC32DAD9CF60093564C /* MiPrimerWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 86028FAD2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		86028FC12DAD9CF60093564C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 865E57652DAD9BF6000CD75F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86028FAC2DAD9CF50093564C;
+			remoteInfo = MiPrimerWidgetExtensionExtension;
+		};
 		865E577E2DAD9BF7000CD75F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 865E57652DAD9BF6000CD75F /* Project object */;
@@ -23,13 +36,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		86028FC42DAD9CF60093564C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				86028FC32DAD9CF60093564C /* MiPrimerWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		86028FAD2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MiPrimerWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		86028FAF2DAD9CF50093564C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		86028FB12DAD9CF50093564C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		865E576D2DAD9BF6000CD75F /* miPrimerWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miPrimerWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865E577D2DAD9BF7000CD75F /* miPrimerWidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miPrimerWidgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		865E57872DAD9BF7000CD75F /* miPrimerWidgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miPrimerWidgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		86028FC72DAD9CF60093564C /* Exceptions for "MiPrimerWidgetExtension" folder in "MiPrimerWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 86028FAC2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		86028FB32DAD9CF50093564C /* MiPrimerWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				86028FC72DAD9CF60093564C /* Exceptions for "MiPrimerWidgetExtension" folder in "MiPrimerWidgetExtensionExtension" target */,
+			);
+			path = MiPrimerWidgetExtension;
+			sourceTree = "<group>";
+		};
 		865E576F2DAD9BF6000CD75F /* miPrimerWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = miPrimerWidget;
@@ -48,6 +96,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		86028FAA2DAD9CF50093564C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86028FB22DAD9CF50093564C /* SwiftUI.framework in Frameworks */,
+				86028FB02DAD9CF50093564C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		865E576A2DAD9BF6000CD75F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +129,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86028FAE2DAD9CF50093564C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86028FAF2DAD9CF50093564C /* WidgetKit.framework */,
+				86028FB12DAD9CF50093564C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		865E57642DAD9BF6000CD75F = {
 			isa = PBXGroup;
 			children = (
 				865E576F2DAD9BF6000CD75F /* miPrimerWidget */,
 				865E57802DAD9BF7000CD75F /* miPrimerWidgetTests */,
 				865E578A2DAD9BF7000CD75F /* miPrimerWidgetUITests */,
+				86028FB32DAD9CF50093564C /* MiPrimerWidgetExtension */,
+				86028FAE2DAD9CF50093564C /* Frameworks */,
 				865E576E2DAD9BF6000CD75F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +156,7 @@
 				865E576D2DAD9BF6000CD75F /* miPrimerWidget.app */,
 				865E577D2DAD9BF7000CD75F /* miPrimerWidgetTests.xctest */,
 				865E57872DAD9BF7000CD75F /* miPrimerWidgetUITests.xctest */,
+				86028FAD2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +164,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		86028FAC2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86028FC82DAD9CF60093564C /* Build configuration list for PBXNativeTarget "MiPrimerWidgetExtensionExtension" */;
+			buildPhases = (
+				86028FA92DAD9CF50093564C /* Sources */,
+				86028FAA2DAD9CF50093564C /* Frameworks */,
+				86028FAB2DAD9CF50093564C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				86028FB32DAD9CF50093564C /* MiPrimerWidgetExtension */,
+			);
+			name = MiPrimerWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = MiPrimerWidgetExtensionExtension;
+			productReference = 86028FAD2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		865E576C2DAD9BF6000CD75F /* miPrimerWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 865E57912DAD9BF7000CD75F /* Build configuration list for PBXNativeTarget "miPrimerWidget" */;
@@ -102,10 +193,12 @@
 				865E57692DAD9BF6000CD75F /* Sources */,
 				865E576A2DAD9BF6000CD75F /* Frameworks */,
 				865E576B2DAD9BF6000CD75F /* Resources */,
+				86028FC42DAD9CF60093564C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				86028FC22DAD9CF60093564C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				865E576F2DAD9BF6000CD75F /* miPrimerWidget */,
@@ -173,6 +266,9 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					86028FAC2DAD9CF50093564C = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					865E576C2DAD9BF6000CD75F = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -203,11 +299,19 @@
 				865E576C2DAD9BF6000CD75F /* miPrimerWidget */,
 				865E577C2DAD9BF7000CD75F /* miPrimerWidgetTests */,
 				865E57862DAD9BF7000CD75F /* miPrimerWidgetUITests */,
+				86028FAC2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		86028FAB2DAD9CF50093564C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		865E576B2DAD9BF6000CD75F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +336,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		86028FA92DAD9CF50093564C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		865E57692DAD9BF6000CD75F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +367,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		86028FC22DAD9CF60093564C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86028FAC2DAD9CF50093564C /* MiPrimerWidgetExtensionExtension */;
+			targetProxy = 86028FC12DAD9CF60093564C /* PBXContainerItemProxy */;
+		};
 		865E577F2DAD9BF7000CD75F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 865E576C2DAD9BF6000CD75F /* miPrimerWidget */;
@@ -269,6 +385,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		86028FC52DAD9CF60093564C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47V6XN83NZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiPrimerWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MiPrimerWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidget.MiPrimerWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86028FC62DAD9CF60093564C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 47V6XN83NZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiPrimerWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MiPrimerWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidget.MiPrimerWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		865E578F2DAD9BF7000CD75F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -456,7 +626,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidgetTests;
+				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -475,7 +645,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidgetTests;
+				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -492,7 +662,7 @@
 				DEVELOPMENT_TEAM = 47V6XN83NZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidgetUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -509,7 +679,7 @@
 				DEVELOPMENT_TEAM = 47V6XN83NZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidgetUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = UwU.miPrimerWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -521,6 +691,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		86028FC82DAD9CF60093564C /* Build configuration list for PBXNativeTarget "MiPrimerWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86028FC52DAD9CF60093564C /* Debug */,
+				86028FC62DAD9CF60093564C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		865E57682DAD9BF6000CD75F /* Build configuration list for PBXProject "miPrimerWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
