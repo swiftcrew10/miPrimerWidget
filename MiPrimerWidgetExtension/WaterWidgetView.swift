@@ -3,7 +3,7 @@ import SwiftUI
 
 struct WaterEntry: TimelineEntry {
     let date: Date
-    let waterCount: Int
+    var waterCount: Int
 }
 
 struct WaterProvider: TimelineProvider {
@@ -19,7 +19,7 @@ struct WaterProvider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<WaterEntry>) -> Void) {
         let count = UserDefaults(suiteName: "group.miPrimerWidget")?.integer(forKey: "waterCount") ?? 0
         let entry = WaterEntry(date: Date(), waterCount: count)
-        completion(Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60))))
+        completion(Timeline(entries: [entry], policy: .never))
     }
 }
 
@@ -29,7 +29,7 @@ struct MiPrimerWidgetExtensionEntryView : View {
     var body: some View {
         VStack(spacing: 12) {
             HStack(spacing: 4) {
-                ForEach(0..<3) { index in
+                ForEach(0..<7) { index in
                     RoundedRectangle(cornerRadius: 4)
                         .frame(width: 15, height: 10)
                         .foregroundColor(index < entry.waterCount ? .cyan : .gray.opacity(0.3))
@@ -37,9 +37,9 @@ struct MiPrimerWidgetExtensionEntryView : View {
             }
 
 
-            if entry.waterCount < 3 {
+            if entry.waterCount < 7 {
                 Button(intent: AddWaterIntent()) {
-                    Text("Agregar agua")
+                    Text("Agregar un vaso de agua")
                         .font(.caption)
                 }
                 .buttonStyle(.borderedProminent)
@@ -48,37 +48,28 @@ struct MiPrimerWidgetExtensionEntryView : View {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundStyle(.green)
                         .font(.largeTitle)
-                    Text("¡Completado!")
+                    Text("¡Has tomado todos tus vasos diarios!")
                         .font(.caption2)
+                    Spacer()
+                    Button(intent: ResetWaterIntent()) {
+                        Text("Resetear")
+                            .font(.caption)
+                    }
+                    .buttonStyle(.borderedProminent)
+
+                
+
+                    
                 }
             }
         }
         .padding()
     }
-
-    func waterSymbol(for count: Int) -> String {
-        switch count {
-        case 1: return "wave.1.forward"
-        case 2: return "wave.2.forward"
-        case 3: return "wave.3.forward"
-        default: return "wave.3.forward"
-        }
-    }
-
-    func opacity(for count: Int) -> Double {
-        switch count {
-        case 0: return 0.2
-        case 1: return 0.4
-        case 2: return 0.7
-        case 3: return 1.0
-        default: return 0.2
-        }
-    }
 }
 
 @main
 struct MiPrimerWidgetExtension: Widget {
-    let kind: String = "MiPrimerWidgetExtension"
+    let kind: String = "Widget Agua"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: WaterProvider()) { entry in
@@ -91,4 +82,14 @@ struct MiPrimerWidgetExtension: Widget {
         .description("Registra tu consumo de agua")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
+}
+
+
+#Preview(as: .systemMedium) {
+    MiPrimerWidgetExtension()
+} timeline: {
+    WaterEntry(date: .now, waterCount: 0)
+    WaterEntry(date: .now, waterCount: 1)
+    WaterEntry(date: .now, waterCount: 2)
+    WaterEntry(date: .now, waterCount: 3)
 }
